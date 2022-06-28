@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BairaktarMove : MonoBehaviour
 {
-    [SerializeField] float FlightSpeed = 0.5f;
+    [SerializeField] float SpeedChange = 0.5f;
     [SerializeField] float RotatingSpeed = 500f;
+    float Speed = 0;
     bool Rotated = false;
     float R = 0;
     float Rotate = 0;
@@ -20,27 +21,11 @@ public class BairaktarMove : MonoBehaviour
     void Update()
     {
         Rotate = -Input.GetAxis("Horizontal") * Time.deltaTime * RotatingSpeed;
-        R += Rotate;
-        Debug.Log(R);
-        float UD = -Input.GetAxis("Mouse Y") * Time.deltaTime * 300;
-        float LR = Input.GetAxis("Mouse X") * Time.deltaTime * 300;
-        transform.Translate(0, 0, FlightSpeed);
+        SpeedChange = Input.GetAxis("Vertocal") * Time.deltaTime * 1;
+        Speed += SpeedChange;
+        float UD = -Input.GetAxis("Mouse Y") * Time.deltaTime * 150;
+        float LR = Input.GetAxis("Mouse X") * Time.deltaTime * 150;
+        transform.Translate(0, 0, Speed);
         transform.Rotate(UD, LR, Rotate);
-/*        if (R < 2 & R > -2)
-        {
-            Rotated = false;
-        }
-        else
-        {
-            Rotated = true;
-        }
-       if (Rotated)
-       {
-            if (R != 0)
-            {
-                LR -= 0.01f;
-                transform.Rotate(0, 0, LR);
-            }
-       }*/
     }
 }
