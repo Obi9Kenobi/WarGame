@@ -5,6 +5,7 @@ using UnityEngine;
 public class BairaktarMove : MonoBehaviour
 {
     float SpeedChange = 0;
+    float SpeedChangeSpeed = 1;
     float RotatingSpeed = 50;
     float Speed = 0.5f;
     float MaxSpeed = 0.8f;
@@ -20,7 +21,7 @@ public class BairaktarMove : MonoBehaviour
     void Update()
     {
         float R = -Input.GetAxis("Horizontal") * Time.deltaTime * RotatingSpeed;
-        SpeedChange = Input.GetAxis("Vertical") * Time.deltaTime * 0.3f;
+        SpeedChange = Input.GetAxis("Vertical") * Time.deltaTime * SpeedChangeSpeed;
         Speed += SpeedChange;
         if (Speed < MinSpeed)
         {
