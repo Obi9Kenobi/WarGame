@@ -8,7 +8,7 @@ public class BairaktarMove : MonoBehaviour
     float SpeedChangeSpeed = 1;
     float RotatingSpeed = 50;
     float Speed = 0.5f;
-    float MaxSpeed = 0.8f;
+    float MaxSpeed = 2f;
     float MinSpeed = 0.2f;
 
     // Start is called before the first frame update
