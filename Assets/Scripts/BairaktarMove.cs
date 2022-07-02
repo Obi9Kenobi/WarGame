@@ -13,7 +13,7 @@ public class BairaktarMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Marge it!");
     }
 
     // Update is called once per frame
@@ -33,8 +33,6 @@ public class BairaktarMove : MonoBehaviour
         Debug.Log(Speed);
         float UD = -Input.GetAxis("Mouse Y") * Time.deltaTime * 150;
         float LR = Input.GetAxis("Mouse X") * Time.deltaTime * 150;
-
-        //move
         transform.Translate(0, 0, Speed);
         transform.Rotate(UD, LR, R);
     }
