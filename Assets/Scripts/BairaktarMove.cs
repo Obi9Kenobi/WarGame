@@ -8,13 +8,13 @@ public class BairaktarMove : MonoBehaviour
     float SpeedChangeSpeed = 1;
     float RotatingSpeed = 50;
     float Speed = 0.5f;
-    float MaxSpeed = 0.8f;
+    float MaxSpeed = 3f;
     float MinSpeed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Marge it!");
+        
     }
 
     // Update is called once per frame
