@@ -33,6 +33,8 @@ public class BairaktarMove : MonoBehaviour
         Debug.Log(Speed);
         float UD = -Input.GetAxis("Mouse Y") * Time.deltaTime * 150;
         float LR = Input.GetAxis("Mouse X") * Time.deltaTime * 150;
+
+        //move
         transform.Translate(0, 0, Speed);
         transform.Rotate(UD, LR, R);
     }
